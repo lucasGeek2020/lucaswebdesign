@@ -1,0 +1,62 @@
+//colors
+$bgdark: #122021;
+$primary: #00B9CA;
+$primary200:#7CDCE2;
+$bglight: #FDFDFD; 
+$black:#121212;
+
+
+//fonts
+            
+$-h1: (
+  font-family: unquote("Josefin Slab"),
+  font-size: 8.5rem //136px
+);
+$-h2: (
+  font-family: unquote("Josefin Slab"),
+  font-size: 5.31rem //85px
+);
+$-h3: (
+  font-family: unquote("Josefin Slab"),
+  font-size: 4.25rem //68px
+);
+$-h4: (
+  font-family: unquote("Josefin Slab"),
+  font-size: 3rem //48px
+);
+$-h4: (
+  font-family: unquote("Josefin Slab"),
+  font-size:2.12rem //34px
+);
+$-h6: (
+  font-family: unquote("Josefin Slab"),
+  font-size: 1.75rem //28px
+);
+$-body1: (
+  font-family: unquote("Roboto"),
+  font-size:1rem //16px
+);
+$-body2: (
+  font-family: unquote("Roboto"),
+  font-size:0.87rem //14px
+);
+$-sub1: (
+  font-family: unquote("Josefin Slab"),
+  font-size:1.43rem //23px
+);
+$-sub2: (
+  font-family: unquote("Josefin Slab"),
+  font-size: 1.25rem //20px
+);
+$-btn: (
+  font-family: unquote("Roboto"),
+  font-size: 0.87rem //14px
+);
+$-overline: (
+  font-family: unquote("Roboto"),
+  font-size: 0.62rem //10px
+);
+$-caption: (
+  font-family: unquote("Roboto"),
+  font-size: 0.75rem //12px
+);

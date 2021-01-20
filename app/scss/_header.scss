@@ -1,0 +1,15 @@
+nav{
+    padding: 24px;
+}
+
+.header{
+
+    &__links{
+        a{
+            
+            font-size: #{map-get($-sub1, font-size)};
+            color: $black;
+        }
+    }
+    
+}
