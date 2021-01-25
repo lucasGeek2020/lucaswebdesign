@@ -1,0 +1,69 @@
+.hero{
+    //background-color: $bgdark;
+    background:linear-gradient(
+        45deg,
+        $bgdark,
+        $bgdark800
+      );
+    padding: 16px;
+    height: 100vh;
+    @include breakpoints-up(large){
+       padding-left: 8.8125rem;
+        padding-right: 8.8125rem;
+    }
+  
+    
+
+    @include breakpoints-down(medium){
+        border-top-left-radius:2.25rem;
+        border-top-right-radius: 2.25rem;
+    }
+
+    &__text{
+        margin-top: 16px;
+        h1{
+          font-weight: 300;
+          font-size: map-get($-h2 , font-size );
+          color: $bglight;
+          line-height: 1.15;
+          max-width: 15.06rem;
+          @include breakpoints-up(large){
+            font-size: map-get($-h1 , font-size );
+            max-width: 21.8125rem;
+            
+        }
+        }
+        h4{
+            font-weight: 500;
+            color: $primary200;
+            font-size: map-get($-h6 , font-size );
+            margin-top: 16px;
+        }
+        p{
+            font-size: map-get($-sub1 , font-size );
+            color: $bglight;
+            line-height: 1.5;
+            max-width: 28.37rem;
+            
+        }
+    }
+    &__links{
+        display: flex;
+        justify-content: space-between;
+        max-width: 10rem;
+        margin-top: 3rem;
+        a{
+            display: block;
+
+            &:hover .icon{
+                fill: $primary;
+            }
+           .icon{
+            fill: $primary200;
+            height: 50px;
+            
+            } 
+        }
+        
+    }
+}

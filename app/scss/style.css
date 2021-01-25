@@ -18,8 +18,16 @@ body {
   background-color: #FDFDFD;
 }
 
+body, html {
+  height: 100%;
+}
+
 a, a:visited, a:hover {
   text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
 }
 
 .flex {
@@ -59,12 +67,19 @@ a, a:visited, a:hover {
 }
 
 nav {
-  padding: 1.5rem;
+  height: 72px;
+  padding: 16px;
 }
 
 .header__logo h2 {
   font-size: 1.43rem;
   color: #121212;
+}
+
+@media (min-width: 64em) {
+  .header__logo {
+    margin-left: 8.8125rem;
+  }
 }
 
 .header__links {
@@ -94,7 +109,7 @@ nav {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   right: 0;
-  bottom: -10px;
+  bottom: -1px;
   position: absolute;
   background-color: #121212;
   -webkit-transition: width .3s ease-in-out;
@@ -107,5 +122,133 @@ nav {
 
 .header__links a:hover::before {
   width: 70%;
+}
+
+.header__links a.open::before {
+  width: 70%;
+}
+
+.hero {
+  background: linear-gradient(45deg, #122021, #213435);
+  padding: 16px;
+  height: 100vh;
+}
+
+@media (min-width: 64em) {
+  .hero {
+    padding-left: 8.8125rem;
+    padding-right: 8.8125rem;
+  }
+}
+
+@media (max-width: 63.937em) {
+  .hero {
+    border-top-left-radius: 2.25rem;
+    border-top-right-radius: 2.25rem;
+  }
+}
+
+.hero__text {
+  margin-top: 16px;
+}
+
+.hero__text h1 {
+  font-weight: 300;
+  font-size: 5.3125rem;
+  color: #FDFDFD;
+  line-height: 1.15;
+  max-width: 15.06rem;
+}
+
+@media (min-width: 64em) {
+  .hero__text h1 {
+    font-size: 8.5rem;
+    max-width: 21.8125rem;
+  }
+}
+
+.hero__text h4 {
+  font-weight: 500;
+  color: #7CDCE2;
+  font-size: 1.75rem;
+  margin-top: 16px;
+}
+
+.hero__text p {
+  font-size: 1.43rem;
+  color: #FDFDFD;
+  line-height: 1.5;
+  max-width: 28.37rem;
+}
+
+.hero__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 10rem;
+  margin-top: 3rem;
+}
+
+.hero__links a {
+  display: block;
+}
+
+.hero__links a:hover .icon {
+  fill: #00B9CA;
+}
+
+.hero__links a .icon {
+  fill: #7CDCE2;
+  height: 50px;
+}
+
+.footer {
+  background: #121212;
+  color: #FDFDFD;
+  padding: 2rem;
+  text-align: center;
+}
+
+.footer a {
+  color: #FDFDFD;
+}
+
+.footer__logo {
+  margin-bottom: 2rem;
+  display: inline-block;
+}
+
+.footer__logo h4 {
+  font-size: 2.12rem;
+  color: #7CDCE2;
+  font-weight: 500;
+}
+
+.footer__social {
+  margin-bottom: 2rem;
+}
+
+.footer__social a:not(:last-child) {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.footer__copyright {
+  font-size: 0.87rem;
+}
+
+.footer__text {
+  margin-bottom: 2rem;
+}
+
+.footer__text p {
+  line-height: 1.8;
+}
+
+.footer__icon {
+  fill: #7CDCE2;
 }
 /*# sourceMappingURL=style.css.map */

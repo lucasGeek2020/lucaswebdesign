@@ -1,0 +1,41 @@
+.footer{
+
+    background: $black;
+    color: $bglight;
+    padding: 2rem;
+    text-align: center;
+    a{
+        color: $bglight;
+    }
+
+    &__logo{
+        margin-bottom: 2rem;
+        display: inline-block;
+        h4{
+          font-size: map-get($-h4 , font-size );
+          color: $primary200;
+          font-weight: 500;  
+        }
+        
+    }
+    &__social{
+        margin-bottom: 2rem;
+        a:not(:last-child){
+            display: inline-block;
+            margin-right: 1rem;
+        }
+    }
+
+    &__copyright{
+        font-size: map-get($-body2 , font-size );
+    }
+    &__text{
+        margin-bottom: 2rem; 
+        p{
+            line-height: 1.8;
+        }
+    }
+    &__icon{
+        fill: $primary200;
+    }
+}

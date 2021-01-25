@@ -1,5 +1,6 @@
 nav{
-    padding: 1.5rem;
+    height: 72px;
+    padding: 16px;
 }
 
 .header{
@@ -8,6 +9,10 @@ nav{
         h2{
             font-size: #{map-get($-sub1, font-size)}; 
             color: $black;
+        }
+        @include breakpoints-up(large){
+            
+            margin-left: 8.8125rem;
         }
     }
     &__links{
@@ -30,7 +35,7 @@ nav{
                 left: 50%;
                 transform: translate(-50%, -50%);
                 right: 0;
-                bottom: -10px;
+                bottom: -1px;
                 position: absolute;
                 background-color: $black;
                 
@@ -42,7 +47,11 @@ nav{
                     width: 70%;
                 }
             }
-            
+            &.open{
+                &::before{
+                    width: 70%;
+                }
+            }
         }
     }
     
