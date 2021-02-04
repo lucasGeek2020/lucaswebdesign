@@ -5,8 +5,10 @@
         $bgdark,
         $bgdark800
       );
+      margin-top: 4.5rem;
     padding: 16px;
-    height: 100vh;
+    min-height: calc(100vh - 4.5rem );
+    padding-bottom: 4.5rem;
     @include breakpoints-up(large){
        padding-left: 8.8125rem;
         padding-right: 8.8125rem;
@@ -65,5 +67,8 @@
             } 
         }
         
+    }
+    &__content{
+
     }
 }

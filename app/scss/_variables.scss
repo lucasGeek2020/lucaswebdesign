@@ -1,13 +1,18 @@
 //colors
-$bgdark: #122021;
-$bgdark800: #213435;
-$bgdark700: #2e4648;
+$bgdark: #213435;
+$bgdark800: #2e4648;
+$bgdark700: #122021;
 $primary: #00B9CA;
 $primary200:#7CDCE2;
 $bglight: #FDFDFD; 
+$ligth:#fff;
 $black:#121212;
 $txtgray: #4F4F4F;
 
+//variants colors
+$ligthgreen: #8FE0B0;
+$ligthpurple: #98AAE4;
+$red: #ff3e1b;
 
 //fonts
             
@@ -27,7 +32,7 @@ $-h4: (
   font-family: unquote("Josefin Slab"),
   font-size: 3rem //48px
 );
-$-h4: (
+$-h5: (
   font-family: unquote("Josefin Slab"),
   font-size:2.12rem //34px
 );

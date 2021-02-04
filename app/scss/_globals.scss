@@ -1,6 +1,7 @@
 html { 
     font-size: 100%;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 *, *::before, *::after{
@@ -8,6 +9,7 @@ html {
 }
 
 body{
+    
     margin: 0;
     font-family: 'Josefin Slab', serif;
     padding: 0;
@@ -22,7 +24,11 @@ body,html{
 a, a:visited, a:hover{
     text-decoration: none;
 }
-h1,h2,h3,h4,h5,h6,p{
+ul,ol{
+    list-style: none;
+    padding-left: 0;
+}
+h1,h2,h3,h4,h5,h6,p,ul{
     margin: 0;
 }
 
@@ -53,4 +59,48 @@ h1,h2,h3,h4,h5,h6,p{
     @include breakpoints-up(large){
         display: none;
     }
+}
+
+//containers
+
+.container{
+    min-height: 100vh;
+    padding-top: 5rem;
+    color:$bglight;
+    
+    
+    @include breakpoints-down(medium){
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    @include breakpoints-up(large){
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    @include breakpoints-up(xlarge){
+        padding-left: 8.8125rem;
+         padding-right: 8.8125rem;
+         
+     }
+     button{
+         
+         border: none;
+         cursor: pointer;
+     }
+
+     h1{
+         font-size: map-get($-h3 , font-size );
+     }
+     input[type="text"],input[type="email"]{
+         height: 3.5rem;
+         border-radius: 0.25rem;
+         border: none;
+         border-bottom: 1px solid rgba($ligth, $alpha: 0.6);
+         
+         font-size: map-get($-sub1 , font-size );
+         padding-left: 1rem;
+         box-sizing: border-box;
+            
+     }
+     
 }

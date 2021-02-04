@@ -1,8 +1,9 @@
 .footer{
 
     background: $black;
+    border-top: 3px solid $primary200;
     color: $bglight;
-    padding: 2rem;
+    padding: 1rem;
     text-align: center;
     a{
         color: $bglight;
@@ -27,12 +28,17 @@
     }
 
     &__copyright{
-        font-size: map-get($-body2 , font-size );
+        font-size: map-get($-sub2 , font-size );
     }
     &__text{
         margin-bottom: 2rem; 
+        
         p{
             line-height: 1.8;
+            font-size: map-get($-sub1 , font-size );
+        }
+        span{
+            border-bottom: 1px solid $primary200;
         }
     }
     &__icon{

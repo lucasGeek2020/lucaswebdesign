@@ -1,0 +1,144 @@
+ 
+ .contact{
+    @include breakpoints-down(medium){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    background-color: $bgdark800;
+    padding-bottom: 2rem;
+
+    button{
+        background: $primary200;
+        height: 2.25rem;
+        line-height: 18px;
+        min-width: 4rem;
+        color: $bgdark700;
+        font-weight: 600;
+        font-family: sans-serif;
+        font-size: 18px;
+        max-width: 30rem;
+        border-radius: 0.25rem;
+        padding: 12px 24px;
+        transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+        box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+        @include breakpoints-down(medium){
+            max-width: 100%;
+        }
+
+        &:hover{
+            transform: translate3d(0px,-1px,0px);
+            background-color: $primary;
+            box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+        }
+    }
+
+    
+    &__item{
+        position: relative;
+        margin-bottom: 2rem;
+        width: 100%;
+        textarea{
+           
+            outline: none;
+            border: none;
+            resize: none;
+            padding: 1rem;
+            font-size: 16px;
+        }
+
+        label{
+            color: rgba($ligth, $alpha: 0.8);
+            font-weight: normal;
+            font-size: map-get($-sub1 , font-size );
+            position: absolute;
+            pointer-events: none;
+            top: 0.625rem;
+            left: 1rem;
+            transition: .2s ease all;
+        }
+        
+        input,textarea{
+            color: $ligth;
+            font-size: map-get($-sub1 , font-size );
+            padding: 0.625rem, 1rem, 0.625rem,1rem;
+            font-family: sans-serif;
+            border: none;
+            width: 30rem;
+            outline: none;
+            background: $bgdark;
+            border-bottom: 1px solid $primary200;
+            display: block;
+
+            @include breakpoints-down(medium){
+                width: 100%;
+            }
+            &:invalid{
+                outline: none;
+                border: none;
+            }
+           
+            &:valid ~ label,
+            &:valid.used ~ label{
+                color: $ligthgreen;
+            }
+
+            &:focus ~ .bar::before,
+            &:focus ~ .bar::after{
+                width: 50%;
+            }
+            &:valid ~ .bar::before,
+            &:valid ~ .bar::after{
+                background-color: $ligthgreen;
+                width: 50%;
+            }
+            &:invalid ~ .bar::before,
+            &:invalid ~ .bar::after{
+                background-color: $red;
+            }
+            
+            &:focus ~ label,
+            &.used ~ label{
+                top: 0rem;
+                font-size: 0.8125rem;
+                color: $primary200;
+            }
+        }
+        .bar{
+            position: relative;
+            display: block;
+            width: 30rem;
+            @include breakpoints-down(medium){
+                width: 100%;
+            }
+            &::before,&::after{
+                content: "";
+                height: 2px;
+                width: 0;
+                bottom: -1px;
+                position: absolute;
+                background: $primary200;
+                transition: .2s ease all;
+            }
+            &::before{
+                left: 50%;
+            }
+            &::after{
+                right: 50%;
+            }
+        }
+        
+    }
+    &__form{
+        display: flex;
+        flex-direction: column;
+        @include breakpoints-down(medium){
+            
+            
+        }
+        
+        margin-top: 1rem;
+        width: 100%;
+    }
+    
+}

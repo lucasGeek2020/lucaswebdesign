@@ -1,0 +1,93 @@
+.projetsContainner{
+    
+    background-color: $bgdark;
+    
+}
+
+.project{
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    
+    margin-top: 1rem;
+    padding-bottom: 2rem;
+    @include breakpoints-up(medium){
+        grid-template-columns: repeat(2, 1fr );
+    }
+    @include breakpoints-up(large){
+        grid-template-columns: repeat(3, 1fr );
+    }
+    @include breakpoints-up(xlarge){
+        grid-template-columns: repeat(4, 1fr );
+    }
+    @include breakpoints-down(small){
+        row-gap: 2.5rem;
+    }
+
+
+    
+    
+    &__item{
+        background: rgba($ligth, $alpha: 0.05);
+        @include breakpoints-up(medium){
+            height: 24.333rem;   
+        }
+        @include breakpoints-up(large){
+            height: 21.1666rem;   
+        }
+        height: 23.5rem;
+        border-radius: 8px;
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2);
+        transition: height .2s cubic-bezier(.65,.05,.36,1), transform .2s cubic-bezier(.65,.05,.36,1), background .2s ease-in-out;
+        &:hover{
+            height: 25rem;
+            transform: translateY(-5%);
+            background: rgba($ligth, $alpha: 0.12);
+            box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.14), 0px 3px 14px rgba(0, 0, 0, 0.12), 0px 5px 5px rgba(0, 0, 0, 0.2);
+        }
+    }
+    &__text{
+        padding: 1rem;
+        @include breakpoints-up(medium){
+            padding:1.5rem ;
+        }
+        color: white;
+        
+        h4{
+            font-size: map-get($-h6, font-size );
+            color: $primary200;
+            
+        }
+        p{
+            padding-top: 0.5rem;
+            
+            display: -webkit-box;
+            width: 100%;
+ 
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            
+        }
+        svg{
+            fill: $primary200;
+            margin-left: 0.5rem;
+        }
+         
+    }
+    &__img{
+        
+        
+        min-height: 60%;
+
+        &.project1{
+            background: linear-gradient(to bottom, rgba(245, 246, 252, 0) , rgba(12, 12,12, 0.60) ),
+        url('../img/portifolio.PNG');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top center;
+        }
+    }
+}
