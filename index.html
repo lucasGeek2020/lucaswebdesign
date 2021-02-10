@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="app/img/8xlogo.ico">
     <link rel="stylesheet" href="app/scss/style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -145,24 +146,24 @@
     </section>
     <section class="contact container" id="contact">
         <h1>Contact </h1>
-        <form  class="contact__form" data-aos="fade-up-right">
+        <form  name="contact__form"class="contact__form" data-aos="fade-up-right" action="app/php/sendEmail.php" method="POST">
             <div class="contact__item">
-                <input type="text" id="name"name="Name" pattern="[a-z\s]+$" maxlength="37" required >
+                <input type="text" id="name"name="Name"  maxlength="37" required >
                 <label for="name">Name</label>
                 <span class="bar"></span>
             </div> 
             <div class="contact__item">
-                <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" maxlength="37" required>
+                <input name="email" type="email"  maxlength="37" required>
                 <label>E-mail</label>
                 <span class="bar"></span>
             </div> 
             <div class="contact__item">
-                <input type="text" pattern="[a-z\s]+$" maxlength="37" required>
+                <input name="subject" type="text"  maxlength="37" required>
                 <label>Subject</label>
                 <span class="bar"></span>
             </div>
             <div class="contact__item">
-                <textarea name="" id=""  rows="5" required ></textarea>
+                <textarea name="message" id=""  rows="5" required ></textarea>
                 <label>Message</label>
                 <span class="bar"></span>
             </div>
@@ -263,6 +264,10 @@
             <script>document.write(new Date().getFullYear())</script> LUCAS MEIRA - SOME RIGHTS RESERVED. Version 1.0
         </div>
     </footer>
+
+    <div class="resultado" id="resultado">
+        Email enviado com sucesso!
+    </div>
     <script>
         AOS.init();
     </script>

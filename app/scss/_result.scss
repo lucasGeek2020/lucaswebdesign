@@ -1,0 +1,31 @@
+.resultado{
+    position: fixed;
+    height: 3.625rem;
+    border-radius: 0.25rem;
+    min-width: 21.5rem;
+    background-color: $ligth;
+    z-index: 3;
+    bottom: -50rem;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem;
+    line-height: map-get($-h6 , font-size );
+    font-weight: 600;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.14), 0px 3px 14px rgba(0, 0, 0, 0.12), 0px 5px 5px rgba(0, 0, 0, 0.2);
+    font-size: map-get($-h6 , font-size );
+    transition: bottom .3s cubic-bezier(.77,-0.58,.17,1.47);
+    &.active{
+        bottom: 1.25rem;
+
+
+    }
+
+    &.then{
+        background-color: $ligthgreen;
+    }
+
+    &.erro{
+        background-color: $ligthred;
+    }
+}

@@ -617,4 +617,38 @@ nav {
   margin-top: 1rem;
   width: 100%;
 }
+
+.resultado {
+  position: fixed;
+  height: 3.625rem;
+  border-radius: 0.25rem;
+  min-width: 21.5rem;
+  background-color: #fff;
+  z-index: 3;
+  bottom: -50rem;
+  left: 50%;
+  margin-right: -50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 1rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  -webkit-box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.14), 0px 3px 14px rgba(0, 0, 0, 0.12), 0px 5px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.14), 0px 3px 14px rgba(0, 0, 0, 0.12), 0px 5px 5px rgba(0, 0, 0, 0.2);
+  font-size: 1.75rem;
+  -webkit-transition: bottom 0.3s cubic-bezier(0.77, -0.58, 0.17, 1.47);
+  transition: bottom 0.3s cubic-bezier(0.77, -0.58, 0.17, 1.47);
+}
+
+.resultado.active {
+  bottom: 1.25rem;
+}
+
+.resultado.then {
+  background-color: #8FE0B0;
+}
+
+.resultado.erro {
+  background-color: #ffa58e;
+}
 /*# sourceMappingURL=style.css.map */
