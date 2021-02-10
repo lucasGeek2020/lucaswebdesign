@@ -7,10 +7,10 @@
     require 'PHPMailer/src/PHPMailer.php';
     require 'PHPMailer/src/SMTP.php';
 
-    $name = $_POST['Name'];
-    $email = $_POST['email'];
-    $subject = $_POST['subject'];
-    $message = $_POST['message'];
+    $name = $_GET['Name'];
+    $email = $_GET['email'];
+    $subject = $_GET['subject'];
+    $message = $_GET['message'];
     
     $resultado = $name;
 
