@@ -104,6 +104,7 @@ document.contact__form.onsubmit = async e => {
     })
     .catch(function(err){
       showResult(err, "erro")
+      console.log(err)
     })
       
 }
