@@ -96,6 +96,7 @@ document.contact__form.onsubmit = async e => {
   fetch(form.action, options)
     .then(resp => console.log(resp))
 */
+console.log(form.action)
   fetch(form.action, options)
     .then(response => response.text())
     .then(function(result){ 
